@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 
-# to do --> arreglar el bug, meterle el validation al train, hacerle plot(graficos) al fit para mirar el .history (las metricas) 
+# to do --> arreglar el bug, meterle el validation al train, hacerle plot(graficos) al fit para mirar el .history (las metricas), aumentar el set de datos.
 
 df=pd.read_csv("C:\Workspace\ML\data-train.csv")
 # print(df)
@@ -58,7 +58,7 @@ modelotest.compile(optimizer="adam",loss="binary_crossentropy",metrics=["accurac
 
 EPOCHS=10
 history=modelotest.fit(train_text, train_labels, epochs=EPOCHS, validation_data=(val_texts,val_labels), shuffle=True)
-history.history
+history.history # aqui sacas los datos haces un diccionario y lo mandas al plot 
 ###############raura######################
 ###############raura######################
 
